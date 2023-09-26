@@ -2,6 +2,9 @@
 :tada: link para ver o projeto:
 https://datasoul-pdp-test.vercel.app/
 
+:art: link figma:
+https://www.figma.com/file/OixBZcYeOxGcIJp1q9G1rM/Test---Front-End-Developer?type=design&node-id=1712-300&mode=design&t=loYkW7bdaWqy0xDy-0
+
 
 # Tecnologias Usadas
 👨‍💻 
