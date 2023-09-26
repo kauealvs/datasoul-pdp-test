@@ -14,7 +14,7 @@ clone o repositório.
 
 após isso rode os seguintes comandos:
 - npm install. :wrench:
-- npm run sass para rodar os sass :art:.
+- npm run sass para rodar o sass :art:.
 - npm start para rodar o projeto. :rocket:
 
 
