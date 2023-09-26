@@ -1,4 +1,4 @@
-# Datasoul-pdp-test
+# Datasoul-pdp-test :sparkles:
 :tada: link para ver o projeto:
 https://datasoul-pdp-test.vercel.app/
 
@@ -6,13 +6,12 @@ https://datasoul-pdp-test.vercel.app/
 https://www.figma.com/file/OixBZcYeOxGcIJp1q9G1rM/Test---Front-End-Developer?type=design&node-id=1712-300&mode=design&t=loYkW7bdaWqy0xDy-0
 
 
-# Tecnologias Usadas
-👨‍💻 
+# Tecnologias Usadas 👨‍💻 
 - React
 - Javascript
 - Sass
 
-# Instalação do projeto
+# Instalação do projeto :wrench:
 clone o repositório.
 
 após isso, entre na pasta **datasoul-pdp** e rode os seguintes comandos:
