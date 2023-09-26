@@ -9,7 +9,7 @@ React
 React Router
 Axios
 
-#Instalação do projeto
+# Instalação do projeto
 clone o repositório.
 
 após isso rode os seguintes comandos:
