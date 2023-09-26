@@ -16,17 +16,27 @@
     height: 756px;
 
     .remove-button {
-        color: #FFFFFF;
+        background-color: #FFFFFF;
         border: none;
         display: flex;
-        margin: 0 90%;
         cursor: pointer;
     }
 }
 
-.quantity-container {
+.info-product-cart {
     display: flex;
     flex-direction: column;
+}
+
+.quantity-container {
+    align-items: center;
+    display: flex;
+    margin-top: 5px;
+    margin-left: 15px;
+    justify-content: center;
+    .qtd-icons {
+        max-width: 40px;
+    }
 
     button.button-quantity {
         background: transparent;
@@ -79,15 +89,19 @@
     padding: 0;
 
     hr {
+        margin: 0;
         border: 1px solid #DDDDDD;
-        margin-bottom: 10px
     }
 }
 
 hr {
-    margin-bottom: 20px;
+    margin: 0;
     border-style: solid;
     border-color: #DDDDDD;
+}
+
+.second-line {
+    margin-bottom: 20px;
 }
 
 .mini-cart-pop-up li {
@@ -102,10 +116,14 @@ hr {
 }
 
 .minicart {
-
+    .minicart-content {
+        position: relative;
+    }
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 756px;
+    // overflow-y: scroll;
+    // overflow-x: hidden;
     width: auto;
     justify-content: space-between;
 
@@ -135,8 +153,12 @@ hr {
     }
 
     button.close-button {
+        position: absolute;
+        left: -85px;
         display: flex;
         cursor: pointer;
+        box-shadow: 0px 4px 20px 0px #3F3F3F33;
+
 
         img {
             display: flex;
@@ -211,6 +233,7 @@ a.button-continue {
     cursor: pointer;
 }
 .quantity{
+    margin-top: 13px;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-weight: 400;
@@ -222,11 +245,27 @@ a.button-continue {
 
 }
 
+.card-product {
+    padding-left: 15px;
+    box-shadow: 0px 4px 8px 0px #85858526;
+    position: relative;
+    img{
+        margin-right: 8px;
+    }
+    .remove-button {
+        position: absolute;
+        top: 0;
+        right: 10px;
+    }
+
+}
+
 .empty-cart{
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 
     p{
         font-family: 'Montserrat', sans-serif;
@@ -240,7 +279,10 @@ a.button-continue {
 
     }
     .button-continue-empty{
-        font-family: Montserrat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Montserrat";
         font-size: 14px;
         font-weight: 400;
         line-height: 14px;
@@ -250,7 +292,7 @@ a.button-continue {
         background-color: #231F20;
         width: 268px;
         height:46px;
-        padding: 16px 24px 16px 24px;
+        padding: 16px, 24px, 16px, 24px;
         border-radius: 2px;
         gap: 10px;
         text-decoration: none;

@@ -50,7 +50,6 @@ const RecommendedProducts = () => {
     <section className="section-recommended-products">
       <h1 className="recommended-title">Produtos Recomendados</h1>
       <ul className="products">
-        {/* {console.log("recomendados", products)} */}
         <Slider {...settings}>
           {products.map((product) => (
             <li className="product-card" key={product.id}>

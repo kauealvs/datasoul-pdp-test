@@ -5,7 +5,7 @@ import axios from "axios";
 import RecommendedProducts from "../components/RecommendedProducts";
 import "./index.css";
 import CartIcon from "../assets/img/ShoppingCartSimple.png";
-import Stars from "../assets/img/Stars.png";
+import Stars from "../assets/img/star.svg";
 
 import { CartContext } from "../contexts/Cart";
 import Cart from "../components/Cart";
@@ -16,6 +16,40 @@ function ProductPage() {
   const [isOpen, setIsOpen] = useState(false);
   const [product, setProduct] = useState({});
   const [quantity] = useState(1);
+
+  const starRate = (star) => {
+    var starInline = <i class="far fa-star"></i>;
+    var starSolid = <i class="fas fa-star"></i>;
+    if (star == 5 || star >= 4.5) {
+      return [starSolid, starSolid, starSolid, starSolid, starSolid];
+    }
+    if (star >= 4 && star <= 4.5) {
+      return [starSolid, starSolid, starSolid, starSolid, starInline];
+    }
+    if (star == 4 || star >= 3.5) {
+      return [starSolid, starSolid, starSolid, starSolid, starInline];
+    }
+    if (star >= 3 && star <= 3.5) {
+      return [starSolid, starSolid, starSolid, starInline, starInline];
+    }
+    if (star == 3 || star >= 2.5) {
+      return [starSolid, starSolid, starSolid, starInline, starInline];
+    }
+    if (star >= 2 && star <= 2.5) {
+      return [starSolid, starSolid, starInline, starInline, starInline];
+    }
+    if (star == 2 || star >= 1.5) {
+      return [starSolid, starSolid, starInline, starInline, starInline];
+    }
+    if (star >= 1 && star <= 1.5) {
+      return [starSolid, starInline, starInline, starInline, starInline];
+    }
+    if (star <= 1) {
+      return [starSolid, starInline, starInline, starInline, starInline];
+    } else {
+      return "Sem Avaliação";
+    }
+  };
 
   useEffect(() => {
     axios
@@ -58,9 +92,9 @@ function ProductPage() {
           <div className="product-details">
             <h2 className="product-title">{product.title}</h2>
             <div className="product-ratings">
-              <p>5 de 5</p>
-              <img src={Stars} alt="stars" />
-              <p>(5)</p>
+              <p>{product?.rating?.rate} de 5</p>
+              {starRate(product?.rating?.rate)}
+              <p>({Math.round(product?.rating?.rate)})</p>
             </div>
             <div className="product-price-container">
               <span className="product-price-discount">R$ 109,90</span>

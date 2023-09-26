@@ -10,10 +10,10 @@ import ArrowDown from "../../assets/img/arrow-down.png";
 import "./index.css";
 
 function Cart({ isOpen, onClose }) {
-  const { cartItems, updateQuantity, removeFromCart } = useContext(CartContext);
+  const { cartItems, changeProductQuantity, remove } = useContext(CartContext);
 
   const handleQuantityChange = (productId, newQuantity) => {
-    updateQuantity(productId, newQuantity);
+    changeProductQuantity(productId, newQuantity);
   };
 
   const handleDecreaseQuantity = (productId, currentQuantity) => {
@@ -26,14 +26,15 @@ function Cart({ isOpen, onClose }) {
 
   const handleRemoveFromCart = (productId) => {
     if (cartItems.length === 1) {
-      removeFromCart(productId);
+      remove(productId);
     }
-    removeFromCart(productId);
+    remove(productId);
   };
 
   const calculateTotal = () => {
     return cartItems.reduce(
-      (total, item) => total + item.price * item.quantity,
+      (total, item) =>
+        Math.round((total + item.price * item.quantity) * 100) / 100,
       0
     );
   };
@@ -59,53 +60,56 @@ function Cart({ isOpen, onClose }) {
                 <ul>
                   {cartItems.map((item) => (
                     <>
-                      <div>
-                        <button
-                          className="remove-button"
-                          onClick={() => handleRemoveFromCart(item.id)}
-                        >
-                          <img src={RemoveIcon} alt="close" />
-                        </button>
-                      </div>
-                      <li key={item.id}>
-                        <img src={item.img} alt={item.title} />
+                      <li className="card-product" key={item.id}>
                         <div>
-                          <h3>
-                            {item.title}
-                            teste
-                          </h3>
+                          <button
+                            className="remove-button"
+                            onClick={() => handleRemoveFromCart(item.id)}
+                          >
+                            <img src={RemoveIcon} alt="close" />
+                          </button>
+                        </div>
+                        <img src={item.img} alt={item.title} />
+                        <div className="info-product-cart">
+                          <h3>{item.title}</h3>
 
                           <div className="product-price-container">
                             <span className="product-price-discount">
                               R$ 109,90
                             </span>
-                            <p>R$ {item.price}</p>
+                            <p>
+                              {item.price.toLocaleString("BRL", {
+                                style: "currency",
+                                currency: "BRL",
+                              })}
+                            </p>
                           </div>
                         </div>
-                        <span className="quantity">
-                          {item.quantity}
-                          qtd
-                        </span>
                         <div className="quantity-container">
-                          <button
-                            className="button-quantity"
-                            onClick={() =>
-                              handleQuantityChange(item.id, item.quantity + 1)
-                            }
-                          >
-                            <img src={ArrowUp} alt="plus" />
-                          </button>
-                          <button
-                            className="button-quantity"
-                            onClick={() =>
-                              handleDecreaseQuantity(item.id, item.quantity)
-                            }
-                          >
-                            <img src={ArrowDown} alt="minus" />
-                          </button>
+                          <span className="quantity">
+                            {item.quantity}
+                            qtd
+                          </span>
+                          <div className="qtd-icons">
+                            <button
+                              className="button-quantity"
+                              onClick={() =>
+                                handleQuantityChange(item.id, item.quantity + 1)
+                              }
+                            >
+                              <img src={ArrowUp} alt="plus" />
+                            </button>
+                            <button
+                              className="button-quantity"
+                              onClick={() =>
+                                handleDecreaseQuantity(item.id, item.quantity)
+                              }
+                            >
+                              <img src={ArrowDown} alt="minus" />
+                            </button>
+                          </div>
                         </div>
                       </li>
-                      <hr />
                     </>
                   ))}
                 </ul>
@@ -114,16 +118,17 @@ function Cart({ isOpen, onClose }) {
           </div>
           {cartItems.length > 0 && (
             <div className="minicart-bottom">
-              <hr />
+              <hr className="firts-line" />
               <div className="price-total-container">
                 <p className="price-total">TOTAL </p>
                 <p className="price-total">
-                  R$
-                  {calculateTotal()}
-                  total
+                  {calculateTotal().toLocaleString("BRL", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
                 </p>
               </div>
-              <hr />
+              <hr className="second-line" />
               <a href="/" className="button-finish">
                 FINALIZAR COMPRA
               </a>
