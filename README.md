@@ -13,9 +13,9 @@ https://datasoul-pdp-test.vercel.app/
 clone o repositório.
 
 após isso rode os seguintes comandos:
-npm install. :wrench:
-npm run sass para rodar os sass :art:.
-npm start para rodar o projeto. :rocket:
+- npm install. :wrench:
+- npm run sass para rodar os sass :art:.
+- npm start para rodar o projeto. :rocket:
 
 
 
