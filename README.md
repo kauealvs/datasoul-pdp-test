@@ -5,7 +5,7 @@ https://datasoul-pdp-test.vercel.app/
 
 # Tecnologias
 -Javascript
--React
+- React
 -React Router
 -Axios
 
@@ -13,9 +13,9 @@ https://datasoul-pdp-test.vercel.app/
 clone o repositório.
 
 após isso rode os seguintes comandos:
-npm install.
-npm run sass para rodar os sass.
-npm start para rodar o projeto.
+npm install. :wrench:
+npm run sass para rodar os sass :art:.
+npm start para rodar o projeto. :rocket:
 
 
 
