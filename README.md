@@ -3,7 +3,8 @@
 https://datasoul-pdp-test.vercel.app/
 
 
-# Tecnologias
+# Tecnologias usadas
+👨‍💻
 - Javascript
 - React
 - React Router
