@@ -3,12 +3,10 @@
 https://datasoul-pdp-test.vercel.app/
 
 
-# Tecnologias usadas
-👨‍💻
-- Javascript
+# Tecnologias
 - React
-- React Router
-- Axios
+- Javascript
+- Sass
 
 # Instalação do projeto
 clone o repositório.
