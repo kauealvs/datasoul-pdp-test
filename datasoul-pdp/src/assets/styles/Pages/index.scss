@@ -1,0 +1,148 @@
+
+    .product-section {
+        display: flex;
+        justify-content: center;
+        margin: 50px 0;
+        .product-image {
+            margin-right: 24px;
+            img {
+                max-height: 431px;
+                max-width: 358px;
+            }
+        }
+
+        .product-info-section {
+            max-width: 496px;
+            .product-title {
+                font-family: "Lora";
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 36px;
+                letter-spacing: 0px;
+                text-align: left;
+                margin: 0 0 44px 0;
+
+            }
+            .product-ratings {
+                line-height: 12.89px;
+                font-family: "Roboto";
+                font-size: 11px;
+                color: #9A9A9A;
+                display: flex;
+                align-items: center;
+                gap:5px;
+                img{
+                height: 18px;
+                }
+            }
+            .product-price-container {
+                margin: 32px 0;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                .product-price-discount{
+                    font-family: "Montserrat";
+                    color: #9A9A9A;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    letter-spacing: 0px;
+                    text-align: left;
+                    text-decoration: line-through;
+                }
+
+                .product-price {
+                    font-family: "Montserrat";
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 36px;
+                    letter-spacing: 0px;
+                    text-align: left;
+                    color: #505050;
+                    
+                }
+            }
+            .add-to-cart {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                height: 56px;
+                width: 100%;
+                max-width: 288px;
+                color: #fff;
+                background-color: #231F20;
+                font-family: "Montserrat";
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 16px;
+                letter-spacing: 0px;
+                text-align: center;
+                &:hover {
+                    cursor: pointer;
+                    background-color: #231f20ea;
+
+                }
+            }
+
+            .main-product-title-description {
+                text-transform: uppercase;
+                color: #231F20;
+                font-family: "Montserrat";
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 21px;
+                letter-spacing: 0px;
+                text-align: left;   
+            }
+
+            .product-description {
+                font-family: "Montserrat";
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 21px;
+                letter-spacing: 0px;
+                text-align: left;
+                color: #505050;
+            }
+
+            hr {
+                margin: 32px 0;
+                border-color: #DDDDDD;
+            }
+        }
+    } 
+    
+@media screen and (max-width: 768px) {
+    .product-section {
+        margin: 0 16px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .product-image {
+        margin-right: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .product-info-section { 
+        .product-title {
+            text-align: center;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;    
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 8px !important;
+        }
+        .add-to-cart {
+            max-width: none !important;
+        }
+
+        .product-price-container {
+            margin: 24px 0 !important;
+            
+        }
+        
+    }
+}

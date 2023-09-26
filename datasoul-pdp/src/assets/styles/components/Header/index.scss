@@ -1,0 +1,61 @@
+.header {
+    background-color: #F9F9F9;
+    max-width: 1440px;
+    margin: 0 auto;
+    .navbar {
+        padding: 48px 112px 48px 112px;
+        display: flex;
+        justify-content: space-between;
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            a{
+                text-decoration: none;
+                color: #444041;
+
+            }
+
+        }
+
+        .burguer-list {
+            display: none;
+        }
+        .cart-button {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            height: 100%;
+            max-height: 24px;
+            width: 100vw;
+            max-width: 78px;
+            background-color: transparent;
+            border: none;
+            font-size: 14px;
+            color: #231F20;
+            text-transform: uppercase;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        .navbar{
+            padding: 28px 24px;
+            .nav-links {
+                display: none;
+            }
+
+            .burguer-list {
+                display: block;
+            }
+        }
+    }
+}
+
