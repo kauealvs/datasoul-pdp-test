@@ -15,7 +15,7 @@ https://www.figma.com/file/OixBZcYeOxGcIJp1q9G1rM/Test---Front-End-Developer?typ
 # Instalação do projeto
 clone o repositório.
 
-após isso rode os seguintes comandos:
+após isso, entre na pasta datasoul-pdp e rode os seguintes comandos:
 - npm install. :wrench:
 - npm run sass para rodar o sass :art:.
 - npm start para rodar o projeto. :rocket:
